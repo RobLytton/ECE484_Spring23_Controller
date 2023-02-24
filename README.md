@@ -3,9 +3,9 @@ My proposal for my individual final project is an arduino game controller that c
 
 I will do this by taking the first Arduino and using this 433MHz RX and TX module:
 https://www.twinschip.com/RF_Wireless_433Mhz
-with an arduino joystick and a few pushbuttons. The rx will be on the portable controller that will be powered by a 9V battery and will be able to send 11 commands 9 based on the direction of the joy sticks and 2 for the buttons
+with an arduino joystick and a few pushbuttons. The tx will be on the portable controller that will be powered by a 9V battery and will be able to send 11 commands 9 based on the direction of the joy sticks and 2 for the buttons
 
-On the receiving side I will have the tx module receive this command and print them to the serial monitor using a java class
+On the receiving side I will have the rx module receive this command and print them to the serial monitor using a java class
 
 I have a personal game I made in java with a keylistener class that gets input from the keyboard. I will make a class that listens for commands from the serial port to replace the keyboard output. 
 
