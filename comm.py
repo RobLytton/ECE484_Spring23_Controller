@@ -1,3 +1,10 @@
+/*
+* MIT License
+* Developped by Rob Lytton 
+* Reads from the incoming numbers from the serial port and 
+* prints the proper command to the screen
+*/
+
 import serial
 import time
 ser = serial.Serial('COM10', 9600, timeout = 0)
