@@ -5,31 +5,32 @@
 * It prints the commands to the serial port as well as
 * sends colors and sounds to the buzzer
 */
-#include <RH_ASK.h> 
+
+// Receiver --------------------
+#include <RH_ASK.h> // receiver library
 #include <SPI.h>
-#include <Adafruit_NeoPixel.h>
-#include "Colors.h"
-int NUMPIXELS = 4;
-int LEDPIN = 6;
-
-#include <Wire.h> // Library for I2C communication
-#include <LiquidCrystal_I2C.h> 
-
-Adafruit_NeoPixel pixels = Adafruit_NeoPixel(NUMPIXELS, LEDPIN, NEO_GRB + NEO_KHZ800);
-LiquidCrystal_I2C lcd = LiquidCrystal_I2C(0x27, 16, 2); 
-int sound = 8;
-long lastSound = millis();
-int soundTime = 5;
-int green = A4;
-int blue = A5;
-int red = A3;
-
 RH_ASK driver;
 String x = "";
 
+// LED STRIP ---------------------------//
+#include <Adafruit_NeoPixel.h> 
+#include "Colors.h" // predefined colors file
+Adafruit_NeoPixel pixels = Adafruit_NeoPixel(NUMPIXELS, LEDPIN, NEO_GRB + NEO_KHZ800);
+int NUMPIXELS = 4;
+int LEDPIN = 6;
 int currPix = 0;
 
-unsigned long lastCom = millis();
+// LCD ------------------------
+#include <Wire.h> 
+#include <LiquidCrystal_I2C.h> 
+LiquidCrystal_I2C lcd = LiquidCrystal_I2C(0x27, 16, 2); 
+
+// Sound --------------------------
+
+int soundTime = 5;
+int sound = 8;
+
+unsigned long lastCom = millis();  // counts so led strip is constanlty updating
 void setup() {
   // put your setup code here, to run once:
   driver.init();
