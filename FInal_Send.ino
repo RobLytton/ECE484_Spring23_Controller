@@ -2,8 +2,8 @@
 * MIT License
 * Developped by Rob Lytton 
 * This code acts as the transmitter for the controller
-* It prints the commands to the serial port as well as
-* sends colors and sounds to the buzzer
+* It sends the commands to the console based on inputs 
+* from the controller
 */
 
 #include <RH_ASK.h> // Transmitter Library
