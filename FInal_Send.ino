@@ -1,7 +1,7 @@
 /*
 * MIT License
 * Developped by Rob Lytton 
-* This code acts as the receiver for the controller
+* This code acts as the transmitter for the controller
 * It prints the commands to the serial port as well as
 * sends colors and sounds to the buzzer
 */
