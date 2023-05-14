@@ -1,3 +1,4 @@
+// Gives pre defined color values for the LED strip
 #ifndef Colors
 #define Red 0xD60A0A
 #define Blue 0x110AD6
