@@ -1,6 +1,15 @@
-#include <RH_ASK.h>
+/*
+* MIT License
+* Developped by Rob Lytton 
+* This code acts as the receiver for the controller
+* It prints the commands to the serial port as well as
+* sends colors and sounds to the buzzer
+*/
+
+#include <RH_ASK.h> // Transmitter Library
 #include <SPI.h>
 
+// Pin assignments
 int x = A5;
 int y = A4;
 int s = 2;
@@ -9,10 +18,11 @@ int b1 = 8;
 int b2 = 9;
 int b3 = 10;
 
+// debounce
 boolean pressed[4] = {0,0,0,0};
 boolean action[4] = {0,0,0,0};
 int buttonDelay = 100;
-
+// rx tx obj
 RH_ASK driver;
 
 void setup() {
@@ -29,7 +39,7 @@ void setup() {
 
 
 void loop() {
-  
+  // strings to send
   const char *meg1 =  "DL  "; // right stick Up
   const char *meg2 =  "DR  "; // left stick Up
   const char *meg3 =  "D   "; // right stick Down
@@ -49,8 +59,8 @@ void loop() {
  
   
   
-  if(analogRead(y) > 700) { // right stick is moved back moving left wheels back
-       if(analogRead(x) > 700) {// right stick is moved back moving left wheels back
+  if(analogRead(y) > 700) { 
+       if(analogRead(x) > 700) {
           Serial.println("Down Left");
           driver.send((uint8_t *)meg1, 12);
           driver.waitPacketSent();
@@ -63,9 +73,9 @@ void loop() {
            driver.waitPacketSent();
            Serial.println("Down");
        }
-  } else if(analogRead(y) < 400) { //  right stick is moved Up moving left wheels Up 
+  } else if(analogRead(y) < 400) {  
       
-       if(analogRead(x) > 700) {// right stick is moved back moving left wheels back
+       if(analogRead(x) > 700) {
           Serial.println("Up Left");
           driver.send((uint8_t *)meg4, 12);
           driver.waitPacketSent();
@@ -80,7 +90,7 @@ void loop() {
           driver.waitPacketSent();
        }
   } else {
-       if(analogRead(x) > 700) {// right stick is moved back moving left wheels back
+       if(analogRead(x) > 700) {
           Serial.println("Left");
           driver.send((uint8_t *)meg7, 12);
           driver.waitPacketSent();
@@ -130,7 +140,8 @@ void loop() {
   } else if(digitalRead(b3) == LOW){
     pressed[2] = false;
   }
-
+    
+  #if 0 // switches on joysticks never work :(
   if(digitalRead(s) == HIGH && !pressed[3]) {
     Serial.println("Switch On");
     driver.send((uint8_t *)meg12, 12);
@@ -140,7 +151,7 @@ void loop() {
   } else if(digitalRead(s) == LOW){
     pressed[3] = false;
   }
-
+  #endif
 
   
   
