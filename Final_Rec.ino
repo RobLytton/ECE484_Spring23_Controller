@@ -10,7 +10,7 @@
 #include <RH_ASK.h> // receiver library
 #include <SPI.h>
 RH_ASK driver;
-String x = "";
+String command = "";
 
 // LED STRIP ---------------------------//
 #include <Adafruit_NeoPixel.h> 
@@ -46,59 +46,59 @@ void loop() {
   uint8_t buf[12];
 
   if (driver.recv(buf, 12)) {
-    x = ((String)(char*)buf);
-    x.trim();
+    command = ((String)(char*)buf);
+    command.trim();
     if(abs(millis() - lastCom) > 250) {
       lastCom = millis();
       currPix++;
       currPix %= NUMPIXELS;
-      if(x != "Stop") {
+      if(command != "Stop") {
           lcd.clear();
-          lcd.println(x);
+          lcd.println(command);
       }
     }
     
-  if(x == "Up") {
+  if(command == "Up") {
     tone(sound, 4000, soundTime);
     
     pixels.fill(LightPurple,currPix,1);
-  } else if (x == "Up Right") {
+  } else if (command == "Up Right") {
     tone(sound, 3750, soundTime);
     
     pixels.fill(LightBlue,currPix,1);
-  } else if (x == "Right") {
+  } else if (command == "Right") {
     tone(sound, 3000, soundTime);
     
     pixels.fill(DarkGreen,currPix,1);
-  } else if (x == "Down Right") {
+  } else if (command == "Down Right") {
     tone(sound, 2750, soundTime);
     
     pixels.fill(Cyan,currPix,1);
-  } else if (x == "Down") {
+  } else if (command == "Down") {
     tone(sound, 2500, soundTime);
   
     pixels.fill(Magenta,currPix,1);
-  } else if (x == "Down Left") {
+  } else if (command == "Down Left") {
     tone(sound, 2250, soundTime);
     
     pixels.fill(Purple,currPix,1);
-  } else if (x == "Left") {
+  } else if (command == "Left") {
     tone(sound, 2000, soundTime);
     
     pixels.fill(Orange,currPix,1);
-  } else if (x == "Up Left") {
+  } else if (command == "Up Left") {
     tone(sound, 1750, soundTime);
     
     pixels.fill(Yellow,currPix,1);
-  } else if (x == "Button 1") {
+  } else if (command == "Button 1") {
     tone(sound, 1500, soundTime);
     
     pixels.fill(Red,currPix,1);
-  } else if (x == "Button 2") {
+  } else if (command == "Button 2") {
     tone(sound, 1250, soundTime);
     
     pixels.fill(Blue,currPix,1);
-  } else if (x == "Button 3") {
+  } else if (command == "Button 3") {
     
     pixels.fill(Green,currPix,1);
     tone(sound, 1000, soundTime);
@@ -110,11 +110,12 @@ void loop() {
   
      
   } 
- 
   
-  
-    
-  
- 
-  
+  void soundLights(int& freq, int& color) {
+      const int soundPin = 8;
+      const int soundTime = 5;
+      tone(sound, freg, soundTime);
+      pixels.fill(color,currPix,1);
+      currPix++;
+  }
 }
