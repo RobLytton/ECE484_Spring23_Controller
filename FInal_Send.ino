@@ -151,19 +151,4 @@ void loop() {
     pressed[3] = false;
   }
   #endif
-
-  
-  
-  
-
-
-  
-  
- 
-  
-
-  
-
-  
-
 }
