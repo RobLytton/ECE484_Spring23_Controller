@@ -7,9 +7,7 @@ with an arduino joystick and a few pushbuttons. The tx will be on the portable i
 
 On the receiving side there is an rx module that receives this command and prints them to the computer console using a python script
 
-I could not get the serial communication to work in java so I used python
-
-In the future I will make it in java to use for my personal game. I made in java with a keylistener class that gets input from the keyboard. I will make a class that listens for commands from the serial port to replace the keyboard output. 
+This will print the message of the sent command to the screen.
 
 This is an interest I have because whenever me and my friends play my game we have to pass the computer back and forth which can get old and this will make it more portable.
 
