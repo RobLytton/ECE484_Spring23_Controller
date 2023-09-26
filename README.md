@@ -19,6 +19,7 @@ Schematic for console with reciever, LEDs, buzzer and LCD:
 
 ![Controller](https://github.com/RobLytton/ECE484_Spring23_Controller/assets/92745408/236660da-ff91-4a74-96ff-93c87847469d)
 
+
 Here is a video link to a live demo: 
 
 https://youtu.be/JbdTxnZAwcU?si=iawSBIZ2GPSAdH0F
