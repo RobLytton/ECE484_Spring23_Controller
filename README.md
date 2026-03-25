@@ -13,7 +13,8 @@ This is an interest I have because whenever me and my friends play my game we ha
 
 Schematic for controller with transmitter, buttons, and joystick:
 
-<img width="1347" height="742" alt="image" src="https://github.com/user-attachments/assets/3bf97d67-8cdc-46ea-9b93-132bfae32308" />
+<img width="1230" height="700" alt="image" src="https://github.com/user-attachments/assets/83c9bf8a-49ad-4bea-a060-5e57457fe01c" />
+
 
 Schematic for console with reciever, LEDs, buzzer and LCD:
 
