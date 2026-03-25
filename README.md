@@ -17,7 +17,8 @@ Schematic for controller with transmitter, buttons, and joystick:
 
 Schematic for console with reciever, LEDs, buzzer and LCD:
 
-![Console](https://github.com/RobLytton/ECE484_Spring23_Controller/assets/92745408/ed4824ed-b32b-452e-a2fd-0aaaf0e5f780)
+<img width="905" height="901" alt="image" src="https://github.com/user-attachments/assets/3b055643-21d5-4b56-aef1-6e685d21800c" />
+
 
 Here is a video link to a live demo: 
 
