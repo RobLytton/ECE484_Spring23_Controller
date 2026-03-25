@@ -17,7 +17,8 @@ Schematic for controller with transmitter, buttons, and joystick:
 
 Schematic for console with reciever, LEDs, buzzer and LCD:
 
-<img width="905" height="901" alt="image" src="https://github.com/user-attachments/assets/3b055643-21d5-4b56-aef1-6e685d21800c" />
+<img width="912" height="861" alt="image" src="https://github.com/user-attachments/assets/5bca04bf-6fdf-4a2a-95f9-beea43c2443e" />
+
 
 
 Here is a video link to a live demo: 
