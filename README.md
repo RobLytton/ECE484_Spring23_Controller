@@ -13,7 +13,7 @@ This is an interest I have because whenever me and my friends play my game we ha
 
 Schematic for controller with transmitter, buttons, and joystick:
 
-![Controller](https://github.com/RobLytton/ECE484_Spring23_Controller/assets/92745408/236660da-ff91-4a74-96ff-93c87847469d)
+<img width="1347" height="742" alt="image" src="https://github.com/user-attachments/assets/3bf97d67-8cdc-46ea-9b93-132bfae32308" />
 
 Schematic for console with reciever, LEDs, buzzer and LCD:
 
