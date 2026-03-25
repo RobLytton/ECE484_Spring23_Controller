@@ -12,11 +12,11 @@
 // Pin assignments
 int x = A5; // left and right
 int y = A4; // up and down
-int s = 2; // Switch on arduino joysticks are not reliable
+int s = 13; // Switch 
 
-int b1 = 8; // red
-int b2 = 9; // blue 
-int b3 = 10; // yellow
+int b1 = 4; // red
+int b2 = 7; // blue 
+int b3 = 8; // yellow
 
 // debounce
 boolean pressed[4] = {0,0,0,0};
